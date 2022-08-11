@@ -284,7 +284,7 @@ func main() {
 	// Try read PAYLOAD
 	for {
 		status, err = nrf.GetStatus()
-		fifoStatus, err = nrf.GetRegisterState(nrf24l01.FIFO_STATUS)
+		fifoStatus, err := nrf.GetRegisterState(nrf24l01.FIFO_STATUS)
         if err != nil {
             println(err)
         }
@@ -331,7 +331,6 @@ package main
 
 import (
 	"machine"
-	"time"
 
     nrf24l01 "tinygo.org/x/drivers/nrf24l01"
 )
